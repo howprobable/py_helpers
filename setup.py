@@ -11,9 +11,6 @@ setup(
     author_email='eggertjannik@gmail.com',
     url='https://github.com/howprobable/py-helpers',
     install_requires=[
-        "dataclasses",
-        "typing",
-        "math",
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
