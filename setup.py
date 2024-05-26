@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='py-helpers',
+    name='py_helpers',
     version='1.0.0',
     packages=find_packages(),
-    description='Helpers I oftenly use',
+    description='Helpers I often use',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='Jannik Eggert',
