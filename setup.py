@@ -14,7 +14,6 @@ setup(
         "dataclasses",
         "typing",
         "math",
-        "__future__"
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
