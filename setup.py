@@ -1,0 +1,30 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='py-helpers',
+    version='1.0.0',
+    packages=find_packages(),
+    description='Helpers I oftenly use',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    author='Jannik Eggert',
+    author_email='eggertjannik@gmail.com',
+    url='https://github.com/howprobable/py-helpers',
+    install_requires=[
+        "dataclasses",
+        "typing",
+        "math",
+        "__future__"
+    ],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+    ],
+)
