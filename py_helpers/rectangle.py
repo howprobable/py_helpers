@@ -121,4 +121,7 @@ class Rectangle:
     def from_bbox(cls, x_min: int, y_min: int, x_max: int, y_max: int) -> Rectangle: 
         return cls.from_anchor(anchor=Point(x_min, y_min), height=y_max-y_min, width=x_max-x_min)
 
+    @classmethod
+    def from_size(cls, height: int, width: int) -> Rectangle: 
+        return cls.from_anchor(anchor=Point(0, 0), height=height, width=width)
     
