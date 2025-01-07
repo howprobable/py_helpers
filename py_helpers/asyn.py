@@ -10,10 +10,17 @@ _executor = ThreadPoolExecutor(max_workers=100)  # Adjust max_workers as needed
 _futures = []
 
 
-def parallel(task, *args, **kwargs):
+def _error_raiser_callback(future: Future): 
+    if future.exception(): raise future.exception()
+
+def parallel(task, *args, **kwargs) -> Future:
     # Submit tasks to the global _executor
+    attach_error_raiser = kwargs.pop("_attach_error_raiser", False)
+
     future = _executor.submit(task, *args, **kwargs)
     _futures.append(future)
+    if attach_error_raiser: future.add_done_callback(_error_raiser_callback)
+
     return future
 
 def wait_for_tasks(tasks: list[Future], verbose: bool = False): 
